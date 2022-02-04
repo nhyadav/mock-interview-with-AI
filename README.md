@@ -7,6 +7,7 @@ Today many applicants apply for a specific job. But recruiter will hire only a s
 - Applicants can generate a report for creating an attractive resume for jobs. 
 - Applicants can attend a mock interview with an AI bot before attending the interview with a recruiter.
 
+
 > ## Technology
 - Python
 - django 3.2
@@ -66,7 +67,7 @@ To Contribute in this project follow below command.
     git remote -v
     # there will be two name 1 is upstream and 2 is origin. if upstream is not visible then create upstream with below command.
     
-    git remote add upstram git@github.com:nhyadav/mock-interview-with-AI.git
+    git remote add upstream git@github.com:nhyadav/mock-interview-with-AI.git
     #copy above link from source repository page. that is already mention above.
 
     git pull upstream 
