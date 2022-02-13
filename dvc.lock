@@ -1,0 +1,179 @@
+schema: '2.0'
+stages:
+  eda:
+    cmd: python src\perform_eda.py
+    deps:
+    - path: data\Resume.csv
+      md5: 0b57e9d4ea0e0995d294bc7978d5c219
+      size: 56273235
+    outs:
+    - path: data\processed\punc_removed_data.csv
+      md5: c5529710fdd16029b97affff3d682073
+      size: 15662089
+    - path: plots\eda_count_plot_of_resume_categories.png
+      md5: a4347e7aea388daedb449da529d7c86a
+      size: 62811
+  lemmatization_of_data:
+    cmd: python src\removestopwords.py
+    deps:
+    - path: data\processed\punc_removed_data.csv
+      md5: c5529710fdd16029b97affff3d682073
+      size: 15662089
+    outs:
+    - path: data\processed\lemmatized_data.csv
+      md5: b7baacf90eaa5f012d3653ee149b3de9
+      size: 27724638
+  tokenize_data_remove_stopwords:
+    cmd: python src\plotfreqdist.py
+    deps:
+    - path: data\processed\lemmatized_data.csv
+      md5: b7baacf90eaa5f012d3653ee149b3de9
+      size: 27724638
+    outs:
+    - path: data\processed\ACCOUNTANT.joblib
+      md5: 797c8a8ee67969baa9fe90a928773ce8
+      size: 1590030
+    - path: data\processed\ADVOCATE.joblib
+      md5: 088e021ed1b09a7d99d47654835ec0d7
+      size: 1661044
+    - path: data\processed\AGRICULTURE.joblib
+      md5: e687c8731187af36b1056d6d38eba5b7
+      size: 899188
+    - path: data\processed\APPAREL.joblib
+      md5: 031bc8a055b291a1e9fe919fd6e55891
+      size: 1249162
+    - path: data\processed\ARTS.joblib
+      md5: 01ad61844c1f106ed8fa5b2da0b4a566
+      size: 1318302
+    - path: data\processed\AUTOMOBILE.joblib
+      md5: 7fd40ae7e45815272e35e34cf4949c73
+      size: 487898
+    - path: data\processed\AVIATION.joblib
+      md5: 06b8b1b5066fe04d8c8120bbf506996a
+      size: 1569276
+    - path: data\processed\BANKING.joblib
+      md5: e290314298229a1a19486230b459171d
+      size: 1548938
+    - path: data\processed\BPO.joblib
+      md5: bebc67b65d8bdd280d33b7124cca0feb
+      size: 350088
+    - path: data\processed\BUSINESS_DEVELOPMENT.joblib
+      md5: 3ec16f7bebda9baab47305ca97762e3a
+      size: 1573610
+    - path: data\processed\CHEF.joblib
+      md5: 647feeae4ac90d79de9830c31b87b44d
+      size: 1505946
+    - path: data\processed\CONSTRUCTION.joblib
+      md5: 96ee1717f3af0db2b36e857d51221d05
+      size: 1593298
+    - path: data\processed\CONSULTANT.joblib
+      md5: 985596955652e48d0d1695ef0280bb54
+      size: 1717100
+    - path: data\processed\DEGITAL_MEDIA.joblib
+      md5: 26829ad9ce44e54443a577c8284b6a8e
+      size: 1274152
+    - path: data\processed\DESIGNER.joblib
+      md5: 8d56d8df7944bfdd5244b17e209e7928
+      size: 1292110
+    - path: data\processed\ENGINEERING.joblib
+      md5: 51e07c82b3d0982881222400b74136c2
+      size: 1677606
+    - path: data\processed\FINANCE.joblib
+      md5: e3a1f7a62fba5b9744ac62782d5422ae
+      size: 1601720
+    - path: data\processed\FITNESS.joblib
+      md5: 5af91d89869c54ebb2e84850159990d8
+      size: 1403292
+    - path: data\processed\HEALTHCARE.joblib
+      md5: 05d18a1a773d4edc08ed88f73d3bb84b
+      size: 1738560
+    - path: data\processed\HR.joblib
+      md5: 39de437cd4601b07a574d52ea41a5b30
+      size: 1622126
+    - path: data\processed\INFORMATION_TECHNOLOGY.joblib
+      md5: 6c21f5bacf8c4d9a770349d3be71799c
+      size: 1891490
+    - path: data\processed\PUBLIC_RELATIONS.joblib
+      md5: 5725948d3c0db769f42499c94118e37d
+      size: 1657520
+    - path: data\processed\SALES.joblib
+      md5: cebe2726bacdebccffe31e392e34bd3c
+      size: 1289518
+    - path: data\processed\TEACHER.joblib
+      md5: f98df2736e2892beb81ab764ff628ad8
+      size: 1200470
+    - path: data\processed\tokenized_data.csv
+      md5: c8341e696e9dd9954f1d27edc3aa37fc
+      size: 44568448
+    - path: plots/eda_frequency_distribution_ACCOUNTANT.png
+      md5: 7d3621452b729bf5b329c3bdc2c8bf24
+      size: 53821
+    - path: plots/eda_frequency_distribution_ADVOCATE.png
+      md5: 36f6a9a74a3630083ca21fe6a9e0c58d
+      size: 55938
+    - path: plots/eda_frequency_distribution_AGRICULTURE.png
+      md5: 9b7062ecb464a500c2dd54527d02522a
+      size: 48864
+    - path: plots/eda_frequency_distribution_APPAREL.png
+      md5: ba292273d8021c54e7691516b6e2b2cd
+      size: 51409
+    - path: plots/eda_frequency_distribution_ARTS.png
+      md5: e243084edc827de2dd6d111d31a63328
+      size: 51561
+    - path: plots/eda_frequency_distribution_AUTOMOBILE.png
+      md5: 25a842e6e48c51a316f2479011a37319
+      size: 49132
+    - path: plots/eda_frequency_distribution_AVIATION.png
+      md5: 7a2fdacf1db63eff6d60a564898445de
+      size: 53071
+    - path: plots/eda_frequency_distribution_BANKING.png
+      md5: d34c11c1c0a30e56c96e7914da478c48
+      size: 53127
+    - path: plots/eda_frequency_distribution_BPO.png
+      md5: ad36f1a16f90647d44348d3fed386913
+      size: 51675
+    - path: plots/eda_frequency_distribution_BUSINESS_DEVELOPMENT.png
+      md5: 0b1bb9f5039cc370c5fe53ef5d6a2855
+      size: 54795
+    - path: plots/eda_frequency_distribution_CHEF.png
+      md5: db7e9aacbc34121c2283910ff9b53013
+      size: 52739
+    - path: plots/eda_frequency_distribution_CONSTRUCTION.png
+      md5: 738439f07f67db1689bf46b2771b7335
+      size: 54126
+    - path: plots/eda_frequency_distribution_CONSULTANT.png
+      md5: c971f6515ee6d0e46cfc4587fb4e61d0
+      size: 55023
+    - path: plots/eda_frequency_distribution_DESIGNER.png
+      md5: c48f5a4c9ae9ce8860cef700e77b7466
+      size: 51823
+    - path: plots/eda_frequency_distribution_DIGITAL_MEDIA.png
+      md5: b3c4d31c45e4ae4a4247f0cfe9e14637
+      size: 52424
+    - path: plots/eda_frequency_distribution_ENGINEERING.png
+      md5: 0db270f0ed3ab3e2730787708640fa5c
+      size: 54448
+    - path: plots/eda_frequency_distribution_FINANCE.png
+      md5: c2a86dc1f41210006f881e9f97ebc144
+      size: 52860
+    - path: plots/eda_frequency_distribution_FITNESS.png
+      md5: eeb75242861fa532ca3cc8cf558851a0
+      size: 50945
+    - path: plots/eda_frequency_distribution_HEALTHCARE.png
+      md5: b02d1620927966c51bf2c375dd920d99
+      size: 54235
+    - path: plots/eda_frequency_distribution_HR.png
+      md5: 2f13ee70deac434d5f917194145524ad
+      size: 51460
+    - path: plots/eda_frequency_distribution_INFORMATION_TECHNOLOGY.png
+      md5: 8f4aeed2120a5e88c6467982608341a2
+      size: 55822
+    - path: plots/eda_frequency_distribution_PUBLIC_RELATIONS.png
+      md5: 2b809bde549202964fd0fa4dc001f99f
+      size: 55526
+    - path: plots/eda_frequency_distribution_SALES.png
+      md5: f2505525ba254f764996336daed2fd74
+      size: 51463
+    - path: plots/eda_frequency_distribution_TEACHER.png
+      md5: 836f0e5247ee08c0355e5de61d29027c
+      size: 49978

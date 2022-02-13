@@ -1,0 +1,72 @@
+stages:
+  eda:
+    cmd: python src\perform_eda.py
+    deps:
+    - data\Resume.csv
+    outs:
+    - data\processed\punc_removed_data.csv
+    - plots\eda_count_plot_of_resume_categories.png
+
+  lemmatization_of_data:
+    cmd: python src\removestopwords.py
+    deps:
+    - data\processed\punc_removed_data.csv
+
+    outs:
+    - data\processed\lemmatized_data.csv
+
+  tokenize_data_remove_stopwords:
+    cmd: python src\plotfreqdist.py
+    deps:
+    - data\processed\lemmatized_data.csv
+
+    outs:
+    - data\processed\tokenized_data.csv
+    - data\processed\HR.joblib
+    - data\processed\DESIGNER.joblib
+    - data\processed\INFORMATION_TECHNOLOGY.joblib
+    - data\processed\TEACHER.joblib
+    - data\processed\ADVOCATE.joblib
+    - data\processed\BUSINESS_DEVELOPMENT.joblib
+    - data\processed\HEALTHCARE.joblib
+    - data\processed\FITNESS.joblib
+    - data\processed\AGRICULTURE.joblib
+    - data\processed\BPO.joblib
+    - data\processed\SALES.joblib
+    - data\processed\CONSULTANT.joblib 
+    - data\processed\DEGITAL_MEDIA.joblib
+    - data\processed\AUTOMOBILE.joblib
+    - data\processed\CHEF.joblib
+    - data\processed\FINANCE.joblib
+    - data\processed\APPAREL.joblib
+    - data\processed\ENGINEERING.joblib
+    - data\processed\ACCOUNTANT.joblib
+    - data\processed\CONSTRUCTION.joblib
+    - data\processed\PUBLIC_RELATIONS.joblib
+    - data\processed\BANKING.joblib
+    - data\processed\ARTS.joblib
+    - data\processed\AVIATION.joblib
+    - plots/eda_frequency_distribution_HR.png
+    - plots/eda_frequency_distribution_DESIGNER.png
+    - plots/eda_frequency_distribution_INFORMATION_TECHNOLOGY.png
+    - plots/eda_frequency_distribution_TEACHER.png
+    - plots/eda_frequency_distribution_ADVOCATE.png
+    - plots/eda_frequency_distribution_BUSINESS_DEVELOPMENT.png
+    - plots/eda_frequency_distribution_HEALTHCARE.png
+    - plots/eda_frequency_distribution_FITNESS.png
+    - plots/eda_frequency_distribution_AGRICULTURE.png
+    - plots/eda_frequency_distribution_BPO.png
+    - plots/eda_frequency_distribution_SALES.png
+    - plots/eda_frequency_distribution_CONSULTANT.png
+    - plots/eda_frequency_distribution_DIGITAL_MEDIA.png
+    - plots/eda_frequency_distribution_AUTOMOBILE.png
+    - plots/eda_frequency_distribution_CHEF.png
+    - plots/eda_frequency_distribution_FINANCE.png
+    - plots/eda_frequency_distribution_APPAREL.png
+    - plots/eda_frequency_distribution_ENGINEERING.png
+    - plots/eda_frequency_distribution_ACCOUNTANT.png
+    - plots/eda_frequency_distribution_CONSTRUCTION.png
+    - plots/eda_frequency_distribution_PUBLIC_RELATIONS.png
+    - plots/eda_frequency_distribution_BANKING.png
+    - plots/eda_frequency_distribution_ARTS.png
+    - plots/eda_frequency_distribution_AVIATION.png

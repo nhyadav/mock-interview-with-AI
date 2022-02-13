@@ -1,0 +1,82 @@
+base:
+  project_name: AI Recriter
+  target: Category
+  random_state: 42
+  resume_category: ['HR', 'DESIGNER', 'INFORMATION_TECHNOLOGY', 'TEACHER', 'ADVOCATE',
+       'BUSINESS_DEVELOPMENT', 'HEALTHCARE', 'FITNESS', 'AGRICULTURE',
+       'BPO', 'SALES', 'CONSULTANT', 'DIGITAL_MEDIA', 'AUTOMOBILE',
+       'CHEF', 'FINANCE', 'APPAREL', 'ENGINEERING', 'ACCOUNTANT',
+       'CONSTRUCTION', 'PUBLIC_RELATIONS', 'BANKING', 'ARTS', 'AVIATION']
+
+
+plot:
+  eda_count_plot: plots/eda_count_plot_of_resume_categories.png
+  eda_freq_dist_HR: plots/eda_frequency_distribution_HR.png
+  eda_freq_dist_DESIGNER: plots/eda_frequency_distribution_DESIGNER.png
+  eda_freq_dist_INFORMATION_TECHNOLOGY: plots/eda_frequency_distribution_INFORMATION_TECHNOLOGY.png
+  eda_freq_dist_TEACHER: plots/eda_frequency_distribution_TEACHER.png
+  eda_freq_dist_ADVOCATE: plots/eda_frequency_distribution_ADVOCATE.png
+  eda_freq_dist_BUSINESS_DEVELOPMENT: plots/eda_frequency_distribution_BUSINESS_DEVELOPMENT.png
+  eda_freq_dist_HEALTHCARE: plots/eda_frequency_distribution_HEALTHCARE.png
+  eda_freq_dist_FITNESS: plots/eda_frequency_distribution_FITNESS.png
+  eda_freq_dist_AGRICULTURE: plots/eda_frequency_distribution_AGRICULTURE.png
+  eda_freq_dist_BPO: plots/eda_frequency_distribution_BPO.png
+  eda_freq_dist_SALES: plots/eda_frequency_distribution_SALES.png
+  eda_freq_dist_CONSULTANT: plots/eda_frequency_distribution_CONSULTANT.png
+  eda_freq_dist_DIGITAL_MEDIA: plots/eda_frequency_distribution_DIGITAL_MEDIA.png
+  eda_freq_dist_AUTOMOBILE: plots/eda_frequency_distribution_AUTOMOBILE.png
+  eda_freq_dist_CHEF: plots/eda_frequency_distribution_CHEF.png
+  eda_freq_dist_FINANCE: plots/eda_frequency_distribution_FINANCE.png
+  eda_freq_dist_APPAREL: plots/eda_frequency_distribution_APPAREL.png
+  eda_freq_dist_ENGINEERING: plots/eda_frequency_distribution_ENGINEERING.png
+  eda_freq_dist_ACCOUNTANT: plots/eda_frequency_distribution_ACCOUNTANT.png
+  eda_freq_dist_CONSTRUCTION: plots/eda_frequency_distribution_CONSTRUCTION.png
+  eda_freq_dist_PUBLIC_RELATIONS: plots/eda_frequency_distribution_PUBLIC_RELATIONS.png
+  eda_freq_dist_BANKING: plots/eda_frequency_distribution_BANKING.png
+  eda_freq_dist_ARTS: plots/eda_frequency_distribution_ARTS.png
+  eda_freq_dist_AVIATION: plots/eda_frequency_distribution_AVIATION.png
+
+data_source:
+  data: data/Resume.csv
+
+
+
+eda:
+  processed_punc: data/processed/punc_removed_data.csv
+  processed_lemmatized: data/processed/lemmatized_data.csv
+  processed_tokenized: data/processed/tokenized_data.csv
+  data_HR: data/processed/HR.joblib
+  data_DESIGNER: data/processed/DESIGNER.joblib
+  data_INFORMATION_TECHNOLOGY: data/processed/INFORMATION_TECHNOLOGY.joblib
+  data_TEACHER: data/processed/TEACHER.joblib
+  data_ADVOCATE: data/processed/ADVOCATE.joblib
+  data_BUSINESS_DEVELOPMENT: data/processed/BUSINESS_DEVELOPMENT.joblib
+  data_HEALTHCARE: data/processed/HEALTHCARE.joblib
+  data_FITNESS: data/processed/FITNESS.joblib
+  data_AGRICULTURE: data/processed/AGRICULTURE.joblib
+  data_BPO: data/processed/BPO.joblib
+  data_SALES: data/processed/SALES.joblib 
+  data_CONSULTANT: data/processed/CONSULTANT.joblib 
+  data_DIGITAL_MEDIA: data/processed/DEGITAL_MEDIA.joblib 
+  data_AUTOMOBILE: data/processed/AUTOMOBILE.joblib 
+  data_CHEF: data/processed/CHEF.joblib 
+  data_FINANCE: data/processed/FINANCE.joblib
+  data_APPAREL: data/processed/APPAREL.joblib 
+  data_ENGINEERING: data/processed/ENGINEERING.joblib 
+  data_ACCOUNTANT: data/processed/ACCOUNTANT.joblib 
+  data_CONSTRUCTION: data/processed/CONSTRUCTION.joblib 
+  data_PUBLIC_RELATIONS: data/processed/PUBLIC_RELATIONS.joblib
+  data_BANKING: data/processed/BANKING.joblib 
+  data_ARTS: data/processed/ARTS.joblib 
+  data_AVIATION: data/processed/AVIATION.joblib 
+
+
+
+feature_engineering:
+  X_train: data/processed/X_train.joblib
+  X_test: data/processed/X_test.joblib
+  y_train: data/processed/y_train.joblib
+  y_test: data/processed/y_test.joblib
+  tfidf: data/processed/tfidf.joblib
+
+
