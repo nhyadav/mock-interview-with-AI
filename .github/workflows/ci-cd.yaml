@@ -2,9 +2,9 @@ name: AI Recruiter
 
 on:
   push:
-    branches: [ ]
+    branches: [main ]
   pull_request:
-    branches: [ ]
+    branches: [main ]
 
 jobs:
   build:
@@ -27,4 +27,4 @@ jobs:
         pip install -r requirements.txt
     - name: Run Tests
       run: |
-        dvc repro
+        echo Pipeline Done with EDA
