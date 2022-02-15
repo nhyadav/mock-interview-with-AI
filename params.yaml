@@ -35,6 +35,32 @@ plot:
   eda_freq_dist_BANKING: plots/eda_frequency_distribution_BANKING.png
   eda_freq_dist_ARTS: plots/eda_frequency_distribution_ARTS.png
   eda_freq_dist_AVIATION: plots/eda_frequency_distribution_AVIATION.png
+  #wordcloud
+  eda_wordcloud_HR: plots/eda_wordcloud_HR.png
+  eda_wordcloud_DESIGNER: plots/eda_wordcloud_DESIGNER.png
+  eda_wordcloud_INFORMATION_TECHNOLOGY: plots/eda_wordcloud_INFORMATION_TECHNOLOGY.png
+  eda_wordcloud_TEACHER: plots/eda_wordcloud_TEACHER.png
+  eda_wordcloud_ADVOCATE: plots/eda_wordcloud_ADVOCATE.png
+  eda_wordcloud_BUSINESS_DEVELOPMENT: plots/eda_wordcloud_BUSINESS_DEVELOPMENT.png
+  eda_wordcloud_HEALTHCARE: plots/eda_wordcloud_HEALTHCARE.png
+  eda_wordcloud_FITNESS: plots/eda_wordcloud_FITNESS.png
+  eda_wordcloud_AGRICULTURE: plots/eda_wordcloud_AGRICULTURE.png
+  eda_wordcloud_BPO: plots/eda_wordcloud_BPO.png
+  eda_wordcloud_SALES: plots/eda_wordcloud_SALES.png
+  eda_wordcloud_CONSULTANT: plots/eda_wordcloud_CONSULTANT.png
+  eda_wordcloud_DIGITAL_MEDIA: plots/eda_wordcloud_DIGITAL_MEDIA.png
+  eda_wordcloud_AUTOMOBILE: plots/eda_wordcloud_AUTOMOBILE.png
+  eda_wordcloud_CHEF: plots/eda_wordcloud_CHEF.png
+  eda_wordcloud_FINANCE: plots/eda_wordcloud_FINANCE.png
+  eda_wordcloud_APPAREL: plots/eda_wordcloud_APPAREL.png
+  eda_wordcloud_ENGINEERING: plots/eda_wordcloud_ENGINEERING.png
+  eda_wordcloud_ACCOUNTANT: plots/eda_wordcloud_ACCOUNTANT.png
+  eda_wordcloud_CONSTRUCTION: plots/eda_wordcloud_CONSTRUCTION.png
+  eda_wordcloud_PUBLIC_RELATIONS: plots/eda_wordcloud_PUBLIC_RELATIONS.png
+  eda_wordcloud_BANKING: plots/eda_wordcloud_BANKING.png
+  eda_wordcloud_ARTS: plots/eda_wordcloud_ARTS.png
+  eda_wordcloud_AVIATION: plots/eda_wordcloud_AVIATION.png
+
 
 data_source:
   data: data/Resume.csv
@@ -42,33 +68,31 @@ data_source:
 
 
 eda:
-  processed_punc: data/processed/punc_removed_data.csv
-  processed_lemmatized: data/processed/lemmatized_data.csv
-  processed_tokenized: data/processed/tokenized_data.csv
-  data_HR: data/processed/HR.joblib
-  data_DESIGNER: data/processed/DESIGNER.joblib
-  data_INFORMATION_TECHNOLOGY: data/processed/INFORMATION_TECHNOLOGY.joblib
-  data_TEACHER: data/processed/TEACHER.joblib
-  data_ADVOCATE: data/processed/ADVOCATE.joblib
-  data_BUSINESS_DEVELOPMENT: data/processed/BUSINESS_DEVELOPMENT.joblib
-  data_HEALTHCARE: data/processed/HEALTHCARE.joblib
-  data_FITNESS: data/processed/FITNESS.joblib
-  data_AGRICULTURE: data/processed/AGRICULTURE.joblib
-  data_BPO: data/processed/BPO.joblib
-  data_SALES: data/processed/SALES.joblib 
-  data_CONSULTANT: data/processed/CONSULTANT.joblib 
-  data_DIGITAL_MEDIA: data/processed/DEGITAL_MEDIA.joblib 
-  data_AUTOMOBILE: data/processed/AUTOMOBILE.joblib 
-  data_CHEF: data/processed/CHEF.joblib 
-  data_FINANCE: data/processed/FINANCE.joblib
-  data_APPAREL: data/processed/APPAREL.joblib 
-  data_ENGINEERING: data/processed/ENGINEERING.joblib 
-  data_ACCOUNTANT: data/processed/ACCOUNTANT.joblib 
-  data_CONSTRUCTION: data/processed/CONSTRUCTION.joblib 
-  data_PUBLIC_RELATIONS: data/processed/PUBLIC_RELATIONS.joblib
-  data_BANKING: data/processed/BANKING.joblib 
-  data_ARTS: data/processed/ARTS.joblib 
-  data_AVIATION: data/processed/AVIATION.joblib 
+  processed_data: data/processed/processed_resume.csv
+  data_HR: data/processed/HR.csv
+  data_DESIGNER: data/processed/DESIGNER.csv
+  data_INFORMATION_TECHNOLOGY: data/processed/INFORMATION_TECHNOLOGY.csv
+  data_TEACHER: data/processed/TEACHER.csv
+  data_ADVOCATE: data/processed/ADVOCATE.csv
+  data_BUSINESS_DEVELOPMENT: data/processed/BUSINESS_DEVELOPMENT.csv
+  data_HEALTHCARE: data/processed/HEALTHCARE.csv
+  data_FITNESS: data/processed/FITNESS.csv
+  data_AGRICULTURE: data/processed/AGRICULTURE.csv
+  data_BPO: data/processed/BPO.csv
+  data_SALES: data/processed/SALES.csv 
+  data_CONSULTANT: data/processed/CONSULTANT.csv 
+  data_DIGITAL_MEDIA: data/processed/DEGITAL_MEDIA.csv 
+  data_AUTOMOBILE: data/processed/AUTOMOBILE.csv 
+  data_CHEF: data/processed/CHEF.csv 
+  data_FINANCE: data/processed/FINANCE.csv
+  data_APPAREL: data/processed/APPAREL.csv 
+  data_ENGINEERING: data/processed/ENGINEERING.csv 
+  data_ACCOUNTANT: data/processed/ACCOUNTANT.csv 
+  data_CONSTRUCTION: data/processed/CONSTRUCTION.csv 
+  data_PUBLIC_RELATIONS: data/processed/PUBLIC_RELATIONS.csv
+  data_BANKING: data/processed/BANKING.csv 
+  data_ARTS: data/processed/ARTS.csv 
+  data_AVIATION: data/processed/AVIATION.csv 
 
 
 

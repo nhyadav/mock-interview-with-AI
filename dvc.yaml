@@ -1,51 +1,35 @@
 stages:
   eda:
-    cmd: python src\perform_eda.py
+    cmd: python src\EDA.py
     deps:
     - data\Resume.csv
     outs:
-    - data\processed\punc_removed_data.csv
+    - data\processed\processed_resume.csv
     - plots\eda_count_plot_of_resume_categories.png
-
-  lemmatization_of_data:
-    cmd: python src\removestopwords.py
-    deps:
-    - data\processed\punc_removed_data.csv
-
-    outs:
-    - data\processed\lemmatized_data.csv
-
-  tokenize_data_remove_stopwords:
-    cmd: python src\plotfreqdist.py
-    deps:
-    - data\processed\lemmatized_data.csv
-
-    outs:
-    - data\processed\tokenized_data.csv
-    - data\processed\HR.joblib
-    - data\processed\DESIGNER.joblib
-    - data\processed\INFORMATION_TECHNOLOGY.joblib
-    - data\processed\TEACHER.joblib
-    - data\processed\ADVOCATE.joblib
-    - data\processed\BUSINESS_DEVELOPMENT.joblib
-    - data\processed\HEALTHCARE.joblib
-    - data\processed\FITNESS.joblib
-    - data\processed\AGRICULTURE.joblib
-    - data\processed\BPO.joblib
-    - data\processed\SALES.joblib
-    - data\processed\CONSULTANT.joblib 
-    - data\processed\DEGITAL_MEDIA.joblib
-    - data\processed\AUTOMOBILE.joblib
-    - data\processed\CHEF.joblib
-    - data\processed\FINANCE.joblib
-    - data\processed\APPAREL.joblib
-    - data\processed\ENGINEERING.joblib
-    - data\processed\ACCOUNTANT.joblib
-    - data\processed\CONSTRUCTION.joblib
-    - data\processed\PUBLIC_RELATIONS.joblib
-    - data\processed\BANKING.joblib
-    - data\processed\ARTS.joblib
-    - data\processed\AVIATION.joblib
+    - data\processed\HR.csv
+    - data\processed\DESIGNER.csv
+    - data\processed\INFORMATION_TECHNOLOGY.csv
+    - data\processed\TEACHER.csv
+    - data\processed\ADVOCATE.csv
+    - data\processed\BUSINESS_DEVELOPMENT.csv
+    - data\processed\HEALTHCARE.csv
+    - data\processed\FITNESS.csv
+    - data\processed\AGRICULTURE.csv
+    - data\processed\BPO.csv
+    - data\processed\SALES.csv
+    - data\processed\CONSULTANT.csv 
+    - data\processed\DEGITAL_MEDIA.csv
+    - data\processed\AUTOMOBILE.csv
+    - data\processed\CHEF.csv
+    - data\processed\FINANCE.csv
+    - data\processed\APPAREL.csv
+    - data\processed\ENGINEERING.csv
+    - data\processed\ACCOUNTANT.csv
+    - data\processed\CONSTRUCTION.csv
+    - data\processed\PUBLIC_RELATIONS.csv
+    - data\processed\BANKING.csv
+    - data\processed\ARTS.csv
+    - data\processed\AVIATION.csv
     - plots/eda_frequency_distribution_HR.png
     - plots/eda_frequency_distribution_DESIGNER.png
     - plots/eda_frequency_distribution_INFORMATION_TECHNOLOGY.png
@@ -70,3 +54,27 @@ stages:
     - plots/eda_frequency_distribution_BANKING.png
     - plots/eda_frequency_distribution_ARTS.png
     - plots/eda_frequency_distribution_AVIATION.png
+    - plots/eda_wordcloud_HR.png
+    - plots/eda_wordcloud_DESIGNER.png
+    - plots/eda_wordcloud_INFORMATION_TECHNOLOGY.png
+    - plots/eda_wordcloud_TEACHER.png
+    - plots/eda_wordcloud_ADVOCATE.png
+    - plots/eda_wordcloud_BUSINESS_DEVELOPMENT.png
+    - plots/eda_wordcloud_HEALTHCARE.png
+    - plots/eda_wordcloud_FITNESS.png
+    - plots/eda_wordcloud_AGRICULTURE.png
+    - plots/eda_wordcloud_BPO.png
+    - plots/eda_wordcloud_SALES.png
+    - plots/eda_wordcloud_CONSULTANT.png
+    - plots/eda_wordcloud_DIGITAL_MEDIA.png
+    - plots/eda_wordcloud_AUTOMOBILE.png
+    - plots/eda_wordcloud_CHEF.png
+    - plots/eda_wordcloud_FINANCE.png
+    - plots/eda_wordcloud_APPAREL.png
+    - plots/eda_wordcloud_ENGINEERING.png
+    - plots/eda_wordcloud_ACCOUNTANT.png
+    - plots/eda_wordcloud_CONSTRUCTION.png
+    - plots/eda_wordcloud_PUBLIC_RELATIONS.png
+    - plots/eda_wordcloud_BANKING.png
+    - plots/eda_wordcloud_ARTS.png
+    - plots/eda_wordcloud_AVIATION.png

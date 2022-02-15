@@ -1,0 +1,4 @@
+[core]
+    remote = origin
+['remote "origin"']
+    url = ../git@github.com:nhyadav/mock-interview-with-AI.git

@@ -1,17 +1,233 @@
 schema: '2.0'
 stages:
   eda:
-    cmd: python src\perform_eda.py
+    cmd: python src\EDA.py
     deps:
     - path: data\Resume.csv
       md5: 0b57e9d4ea0e0995d294bc7978d5c219
       size: 56273235
     outs:
-    - path: data\processed\punc_removed_data.csv
-      md5: c5529710fdd16029b97affff3d682073
-      size: 15662089
+    - path: data\processed\ACCOUNTANT.csv
+      md5: b41d4c34b891e29ec3c611c7175b3139
+      size: 2098775
+    - path: data\processed\ADVOCATE.csv
+      md5: f1e579cd3d07868d488b8e48b02e17fb
+      size: 2179433
+    - path: data\processed\AGRICULTURE.csv
+      md5: 4954701908dcc242a89c889d53d73b7f
+      size: 1170435
+    - path: data\processed\APPAREL.csv
+      md5: b4b5a7d136d579ba5fef73afb035f4b9
+      size: 1635792
+    - path: data\processed\ARTS.csv
+      md5: 94a6b48ea813f2c71946f306a58493ba
+      size: 1728832
+    - path: data\processed\AUTOMOBILE.csv
+      md5: acf319636774f79e08fc6b9cc6263cd4
+      size: 638862
+    - path: data\processed\AVIATION.csv
+      md5: 7b5598d06901162ea306a6e3f0da1cac
+      size: 2046790
+    - path: data\processed\BANKING.csv
+      md5: 24e522220865f3f359d2ee875a64e665
+      size: 2015940
+    - path: data\processed\BPO.csv
+      md5: f485c117198340f624d8871cd68f73c5
+      size: 454191
+    - path: data\processed\BUSINESS_DEVELOPMENT.csv
+      md5: 534b1024ae6f5095fbc226b97cf00db0
+      size: 2049191
+    - path: data\processed\CHEF.csv
+      md5: c139e3073abf5d263ce3ab5c7b215992
+      size: 1971187
+    - path: data\processed\CONSTRUCTION.csv
+      md5: 1cdf73a271791473f7e64443f4afc1d5
+      size: 2084950
+    - path: data\processed\CONSULTANT.csv
+      md5: e3f45eabe36ca93940b5670d9ba526dc
+      size: 2236487
+    - path: data\processed\DEGITAL_MEDIA.csv
+      md5: 4462d17f12a2baf8391cd2044b2ba38c
+      size: 1653245
+    - path: data\processed\DESIGNER.csv
+      md5: 154714d4f5c00082e09b405c0d5ca281
+      size: 1687400
+    - path: data\processed\ENGINEERING.csv
+      md5: f97646ced58cb6385b8857267f814e34
+      size: 2173192
+    - path: data\processed\FINANCE.csv
+      md5: d93691ee8bab6812f3f02634fa64ed45
+      size: 2102114
+    - path: data\processed\FITNESS.csv
+      md5: ccf94803cae3e7389134e5cd9d9aeebd
+      size: 1835580
+    - path: data\processed\HEALTHCARE.csv
+      md5: 2dfec6744be525efc8cac2bc08777499
+      size: 2277765
+    - path: data\processed\HR.csv
+      md5: 4502d72664800206a255c587bb6c608d
+      size: 2111197
+    - path: data\processed\INFORMATION_TECHNOLOGY.csv
+      md5: 8dc03fc0faeb5e051985201e83292578
+      size: 2464816
+    - path: data\processed\PUBLIC_RELATIONS.csv
+      md5: 3a87433a1a55f2acb14c5e33dfd11e94
+      size: 2167208
+    - path: data\processed\SALES.csv
+      md5: 2c16d1b3179bbc35f1e98c9b9a7efbba
+      size: 1698559
+    - path: data\processed\TEACHER.csv
+      md5: d6457cc707f557e8dce7affa2532aa20
+      size: 1580979
+    - path: data\processed\processed_resume.csv
+      md5: a866ebbd98655a00530aa5541f1506a8
+      size: 59692884
+    - path: plots/eda_frequency_distribution_ACCOUNTANT.png
+      md5: ab0d5c7fec0000ff875d3a2933042f36
+      size: 46192
+    - path: plots/eda_frequency_distribution_ADVOCATE.png
+      md5: d2016c0ec0aac50e67a287b1ab2ab839
+      size: 42739
+    - path: plots/eda_frequency_distribution_AGRICULTURE.png
+      md5: af4da67e04fdd45b071fe1be3a8f0247
+      size: 43483
+    - path: plots/eda_frequency_distribution_APPAREL.png
+      md5: 6457d41ba688fe5e43026a58a9caed03
+      size: 43626
+    - path: plots/eda_frequency_distribution_ARTS.png
+      md5: c3387732392bdb892b68849edcb608f2
+      size: 42158
+    - path: plots/eda_frequency_distribution_AUTOMOBILE.png
+      md5: 071a251afe052b8f5fac44a752a9a4e1
+      size: 42022
+    - path: plots/eda_frequency_distribution_AVIATION.png
+      md5: 401975aef3cd7e2dfeede450a8529640
+      size: 44505
+    - path: plots/eda_frequency_distribution_BANKING.png
+      md5: 17018522c70895579c909ef99e1e4b18
+      size: 43595
+    - path: plots/eda_frequency_distribution_BPO.png
+      md5: 4be155d471fabc5cc16e235ed4ef1681
+      size: 41076
+    - path: plots/eda_frequency_distribution_BUSINESS_DEVELOPMENT.png
+      md5: ec7216d3a4dbfadfb00ade102891392d
+      size: 47016
+    - path: plots/eda_frequency_distribution_CHEF.png
+      md5: f88e8dfd316ae57f27ef90ed334df25d
+      size: 42325
+    - path: plots/eda_frequency_distribution_CONSTRUCTION.png
+      md5: fab8b99bdc641611b0515eb8fb8ad036
+      size: 46045
+    - path: plots/eda_frequency_distribution_CONSULTANT.png
+      md5: e6410433c951d9365ca5ce3bd20c38f3
+      size: 44079
+    - path: plots/eda_frequency_distribution_DESIGNER.png
+      md5: 26febe7f669ec5c6201604fb6f1133e5
+      size: 44498
+    - path: plots/eda_frequency_distribution_DIGITAL_MEDIA.png
+      md5: 027e7a1beb16c621bfb6816ecf1a4b2d
+      size: 44845
+    - path: plots/eda_frequency_distribution_ENGINEERING.png
+      md5: 11b2d1026b63b191c4ec2286bcce701e
+      size: 43755
+    - path: plots/eda_frequency_distribution_FINANCE.png
+      md5: d59b4a6f1defa4255e2a36a2ea324fb8
+      size: 45026
+    - path: plots/eda_frequency_distribution_FITNESS.png
+      md5: 3f876a6b240d9e52756c966a59bf41e1
+      size: 43584
+    - path: plots/eda_frequency_distribution_HEALTHCARE.png
+      md5: a625ce83974d582896531904a3c67503
+      size: 43478
+    - path: plots/eda_frequency_distribution_HR.png
+      md5: 960bfff8ce18a1a3a4d184275afa4aae
+      size: 44273
+    - path: plots/eda_frequency_distribution_INFORMATION_TECHNOLOGY.png
+      md5: b05df1e80b453969e5d185083c176a2b
+      size: 46427
+    - path: plots/eda_frequency_distribution_PUBLIC_RELATIONS.png
+      md5: 3034c7249f2770703ef0da90c871b947
+      size: 44496
+    - path: plots/eda_frequency_distribution_SALES.png
+      md5: 0ef1fd7d10434b872b90bbd0ecf37a44
+      size: 42762
+    - path: plots/eda_frequency_distribution_TEACHER.png
+      md5: e132c6574d9141a513fb0f1605100f9a
+      size: 44641
+    - path: plots/eda_wordcloud_ACCOUNTANT.png
+      md5: 4ed1feb94b2aebdf65887bb8696d0987
+      size: 175341
+    - path: plots/eda_wordcloud_ADVOCATE.png
+      md5: bd57cdede7e41a9f18b6719f8f407d63
+      size: 181798
+    - path: plots/eda_wordcloud_AGRICULTURE.png
+      md5: 2871fe6aac33054a362fbe3d098299e4
+      size: 175415
+    - path: plots/eda_wordcloud_APPAREL.png
+      md5: 273a2ca380f139911ab0165e933821f5
+      size: 179960
+    - path: plots/eda_wordcloud_ARTS.png
+      md5: 175002dbc88c41c034d589297f500207
+      size: 175364
+    - path: plots/eda_wordcloud_AUTOMOBILE.png
+      md5: 5faa5f4899f791bb1a6f0cc2ec076555
+      size: 174195
+    - path: plots/eda_wordcloud_AVIATION.png
+      md5: fdd3fa5e265fe3ad8928004d64571de0
+      size: 174204
+    - path: plots/eda_wordcloud_BANKING.png
+      md5: c32b10c9cea47fe7dd42fff065fc19d3
+      size: 180634
+    - path: plots/eda_wordcloud_BPO.png
+      md5: 3f79648701f82986780e79f866799246
+      size: 175271
+    - path: plots/eda_wordcloud_BUSINESS_DEVELOPMENT.png
+      md5: a43b5ffe117801240f46d0d3a8a7d433
+      size: 180232
+    - path: plots/eda_wordcloud_CHEF.png
+      md5: 5cbf8014a9eb61bb401291c02e7f3d8b
+      size: 173962
+    - path: plots/eda_wordcloud_CONSTRUCTION.png
+      md5: f1597c1ec731f9afb211df8f7d504ce7
+      size: 174447
+    - path: plots/eda_wordcloud_CONSULTANT.png
+      md5: b6711539cd9c4cd34b0f091b55c625ab
+      size: 179014
+    - path: plots/eda_wordcloud_DESIGNER.png
+      md5: b977388b6d3e3a88bd1c6e162c3669b0
+      size: 182486
+    - path: plots/eda_wordcloud_DIGITAL_MEDIA.png
+      md5: 130e23467ff95c948ea596f04696d1ea
+      size: 173305
+    - path: plots/eda_wordcloud_ENGINEERING.png
+      md5: c7b86c5fe654a83d0770c508a3a325e7
+      size: 168520
+    - path: plots/eda_wordcloud_FINANCE.png
+      md5: ac886e00f5ff08a66b328c5da711e000
+      size: 170064
+    - path: plots/eda_wordcloud_FITNESS.png
+      md5: 9fc167638367b37d85fcc3d903137e29
+      size: 181642
+    - path: plots/eda_wordcloud_HEALTHCARE.png
+      md5: 30a865ea407ab6481fd319ea176aefab
+      size: 179412
+    - path: plots/eda_wordcloud_HR.png
+      md5: 34275cab93f6807a6ab2c5a603f92d03
+      size: 707077
+    - path: plots/eda_wordcloud_INFORMATION_TECHNOLOGY.png
+      md5: 209242febea72a747d2b3a546c57c329
+      size: 185804
+    - path: plots/eda_wordcloud_PUBLIC_RELATIONS.png
+      md5: b07fcc204c1bc4bab76e3534a14bf34f
+      size: 182797
+    - path: plots/eda_wordcloud_SALES.png
+      md5: 483ea991779cc5a44cf508ffaa6c2405
+      size: 177093
+    - path: plots/eda_wordcloud_TEACHER.png
+      md5: abd25195c597e9fee1925baf2a1357bf
+      size: 169609
     - path: plots\eda_count_plot_of_resume_categories.png
-      md5: a4347e7aea388daedb449da529d7c86a
+      md5: ee58e4250bdedbc24e8c85ddf471e790
       size: 62811
   lemmatization_of_data:
     cmd: python src\removestopwords.py
