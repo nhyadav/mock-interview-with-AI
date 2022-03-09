@@ -1,0 +1,19 @@
+{% extends 'home/base.html' %}
+{% block title %}home{% endblock title %}
+{% block home %}active{% endblock home %}
+{% block bgcolor %}{{color}}{% endblock bgcolor %}
+{% block content %}
+<div class="container">
+
+<form action='/' method='post'>
+    {% csrf_token %}
+    <div class='d-inline'
+    <label for="exampleColorInput" class="form-label">Choose Your Background color</label>
+    <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" name='colorchoose' title="Choose your color">
+    <button type="submit" class="btn btn-primary">Set</button>
+    </div>
+<form>
+</div>
+{% endblock content %}
+
+{% comment %} {% block footer %}fix-bottom{% endblock footer %} {% endcomment %}

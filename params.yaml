@@ -63,7 +63,7 @@ plot:
 
 
 data_source:
-  data: data/Resume.csv
+  data: data/frshresumedata.csv
 
 
 
@@ -102,5 +102,21 @@ feature_engineering:
   y_train: data/processed/y_train.joblib
   y_test: data/processed/y_test.joblib
   tfidf: data/processed/tfidf.joblib
+  target_dict: data/processed/target_dict.joblib
+  test_size: 0.2
+
+
+
+model_building:
+  model_name: XGBClassifier()
+  model_path: model/saved_model/xgboost_model.joblib
+  model_train_prediction: model/prediction_data/train_prediction.joblib
+  model_test_prediction: model/prediction_data/test_prediction.joblib
+
+
+model_evaluate:
+  evalution_matrics: model/evalution_matrics/reports.json
+
+
 
 

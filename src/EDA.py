@@ -20,7 +20,9 @@ PLOT_PALETTE = 'tableau-colorblind10'
 # for other color map, please run: mpl.pyplot.colormaps()
 WORDCLOUD_COLOR_MAP = 'tab10_r'
 
-
+def drop_most_freq_word(data):
+    data = set(data.split())
+    return ' '.join(data)
 
 
 def wordcloud(df):
@@ -53,13 +55,6 @@ def remove_punction(data):
     resumedata = re.sub(r"http\S+"," ",resumedata)
     resumedata = re.sub(r"www\S+"," ",resumedata)
     resumedata = re.sub(r'[^A-Za-z]',' ', resumedata)
-    # resumedata = re.sub('[0-9]+', ' ', resumedata)
-    # resumedata = re.sub("http+$"," ",resumedata)
-    # resumedata = re.sub('RT|cc', ' ', resumedata)  # remove RT and cc
-    # resumedata = re.sub('#S+', ' ', resumedata)  # remove hashtags
-    # resumedata = re.sub('@S+', ' ', resumedata)  # remove mentions
-    # resumedata = re.sub('[%s]' % re.escape("""!"#$%&'()*+,-./:;<=>?@[]^_`{|}~"""), ' ', resumedata)  # remove punctuations
-    # resumedata = re.sub(r'[^x00-x7f]', ' ', resumedata) 
     resumedata = re.sub("\s+\Z"," ", resumedata)
     return resumedata
 
@@ -80,6 +75,10 @@ def exploar_data_analysis(path):
     figure = plt.figure(figsize=(20,20))
     sns.countplot(y='Category', data=data)  #plot the count plot with the help of seaborn
     plt.savefig(param['plot']['eda_count_plot'])   #save the count plot 
+    ##############drop the most freq data########################
+    # data['drop_duplicate'] = data.Resume_str.apply(lambda x: drop_most_freq_word(x))
+
+    #####################clean the data##########################
     data['cleaned_resume'] = data.Resume_str.apply(lambda x: remove_punction(x))
     print("remove unusual text done.......")
 
@@ -87,7 +86,7 @@ def exploar_data_analysis(path):
     print("Remove stopword done...............")
     data['tokenize_data'] = data.lemmatize_data.apply(lambda x:tokenize_data(x))
     print("tokenize done................")
-    processed_data = data.drop(['Resume_html'], axis=1)
+    # processed_data = data.drop(['Resume_html'], axis=1)
     
     # data.to_csv(param['eda']['processed_data'], index=False)
     #################wordcloud###############################
@@ -95,14 +94,14 @@ def exploar_data_analysis(path):
                   'DIGITAL-MEDIA':'DIGITAL_MEDIA','PUBLIC-RELATIONS':'PUBLIC_RELATIONS'},inplace=True)
     categories = param['base']['resume_category']
     df_categories = [data[data['Category'] == category].loc[:, ['lemmatize_data', 'Category']] for category in categories]
-    processed_data.to_csv(param['eda']['processed_data'], index=False)
+    data.to_csv(param['eda']['processed_data'], index=False)
     
     ###################seperate each categories resume
     dt_categories = [data[data['Category'] == category].loc[:, ['tokenize_data', 'Category','lemmatize_data','Resume_str']] for category in categories]
     for i,cat in enumerate(categories):
         dt_categories[i].to_csv(param['eda']['data_'+cat])
     ###################################################
-    # plt.figure(figsize=(32, 28))
+    plt.figure(figsize=(32, 28))
     for i, category in enumerate(categories):
         wc = wordcloud(df_categories[i])
         # plt.subplot(6, 4, i + 1).set_title(category)

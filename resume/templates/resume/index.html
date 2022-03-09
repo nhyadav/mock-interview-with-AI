@@ -1,0 +1,16 @@
+{% extends 'resume/base.html' %}
+{% block title %}resume{% endblock title %}
+{% block resume %}active{% endblock resume %}active
+{% block content %}
+<div class="container bg-light">
+<h3 class="text-center"><strong>~:~ Welcome in Resume Scanning Environment ~:~</strong></h3>
+<div class="">
+    <form method='post', action='scan'>
+        {% csrf_token %}
+        <label for="myfile">Select a file:</label>
+        <input type="file" id="myfile" name="myfile">
+        <button type="submit" class="btn btn-primary">Scan</button>
+    </form>
+</div>
+</div>
+{% endblock content %}

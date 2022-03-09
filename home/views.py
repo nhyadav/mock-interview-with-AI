@@ -5,4 +5,11 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    return HttpResponse("<h1><strong>Welcome in AI Recruter Portal</strong></h1>")
+    color='#133FC2'
+    if request.method == "POST":
+        color = request.POST['colorchoose']
+    context = {
+        'color': color
+    }
+    return render(request, "home/index.html", context=context)
+
