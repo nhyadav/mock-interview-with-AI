@@ -1,0 +1,112 @@
+body {
+    /* background-color: #6D21DE; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    /* background-color: #FFFFFF; */
+    background-color: #6D21DE;
+    width: 400px;
+    height: 400px;
+    margin: 7em auto;
+    border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.sign {
+    padding-top: 40px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.un {
+width: 76%;
+color: rgba(30, 31, 32, 0.789);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgb(250, 249, 249);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.08);
+margin-bottom: 50px;
+/* margin-left: 46px; */
+text-align: center;
+margin-bottom: 27px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+form.form1 {
+    padding-top: 40px;
+}
+
+.pass {
+width: 76%;
+color: rgba(28, 29, 30, 0.625);
+font-weight: 700;
+font-size: 14px;
+letter-spacing: 1px;
+background: rgb(247, 243, 243);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.08);
+margin-bottom: 50px;
+/* margin-left: 46px; */
+text-align: center;
+margin-bottom: 27px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.un:focus, .pass:focus {
+    border: 2px solid rgba(245, 242, 242, 0.18) !important;
+    
+}
+
+.submit {
+    cursor: pointer;
+    border-radius: 5em;
+    color: white;
+    background: linear-gradient(to right, #10d520, #ec1a8a);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* margin-left: 35%; */
+    font-size: 13px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+}
+
+.submit:hover{
+    color: rgb(8, 245, 103);
+}
+
+.forgot {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #16eea2;
+    padding-top: 15px;
+    
+}
+
+a {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: #e76d10;
+    text-decoration: none
+}
+
+@media (max-width: 600px) {
+    .main {
+        border-radius: 0px;
+    }
+}

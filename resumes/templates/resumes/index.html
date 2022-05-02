@@ -1,0 +1,42 @@
+{% extends 'resumes/base.html' %}
+{% block title %}resume{% endblock title %}
+{% block resume %}active{% endblock resume %}active
+{% block content %}
+<div class="container bg-light">
+<h3 class="text-center"><strong>~:~ Welcome in Resume Scanning Environment ~:~</strong></h3>
+<div class="">
+    <form method='POST' enctype="multipart/form-data" action='scan'>
+        {% csrf_token %}
+        {% comment %} <label for="myfile">Select a file:</label>
+        <input type="file" id="myfile" name="myfile">
+        <button type="submit" class="btn btn-primary">Scan</button> {% endcomment %}
+        {% for field in form %}
+        {% if  field.name == "resume" %}
+        <div class='form row my-3'>
+            <div class='form-group col'>
+                <label class="label" for='job'>Upload Your Resume:</label>
+            </div>
+            <div class='col-10'>
+                <input class="un" type="{{field.field.widget.input_type}}" id='job' name='{{field.name}}' align="center" placeholder="upload resume in pdf format">
+
+            </div>
+        </div>
+        {% elif field.name == "types" %}
+        <div class='form row my-3'>
+            <div class='form-group col'>
+                <label class="label" for="types">Enter youy resume format:</label>
+            </div>
+            <div class='col-10'>
+                <input class="un" type="{{field.field.widget.input_type}}" id="types" name='{{field.name}}' align="center" placeholder="Ex: pdf, doc">
+
+            </div>
+        </div>
+        {% endif %}
+    
+    {% endfor %}
+        <button type="submit" class="btn btn-primary">Scan</button>
+    </form>
+</div>
+</div>
+{% endblock content %}
+{% block footer %}fixed-bottom{% endblock footer %}

@@ -3,7 +3,7 @@
 {% block home %}active{% endblock home %}
 {% block bgcolor %}{{color}}{% endblock bgcolor %}
 {% block content %}
-<div class="container">
+<div class="container overflow-auto">
 
 <form action='/' method='post'>
     {% csrf_token %}
@@ -16,4 +16,4 @@
 </div>
 {% endblock content %}
 
-{% comment %} {% block footer %}fix-bottom{% endblock footer %} {% endcomment %}
+{% block footer %}fixed-bottom{% endblock footer %}

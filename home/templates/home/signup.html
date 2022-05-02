@@ -1,0 +1,67 @@
+{% extends 'home/base.html' %}
+{% block title %}Signup{% endblock title %}
+{% block home %}active{% endblock home %}
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home/css/signup.css' %}">
+{% endblock css %}
+{% block content%}
+<div class="container overflow-auto">
+    {% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+    <strong>Message:</strong> {{ message }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endfor %}
+    <div class="main">
+        <h2 class="sign" align="center"><strong>Sign up for New Users</strong></h2>
+        <form class="form1" action="/signup" method='post'>
+            {% csrf_token %}
+            <div class='form row'>
+                <div class='form-group col-md-6'>
+                    <label class="label" for=''>First Name</label><br>
+                    <input class="un " type="text" id='fname' name='fname' align="center"
+                           placeholder="First Name"><br>
+                </div>
+                <div class='form-group col-md-6'>
+                    <label class="label" for=''>Middle Name</label><br>
+                    <input class="un " type="text" id='mname' name='mname' align="center"
+                           placeholder="Middle Name"><br>
+                </div>
+            </div>
+            <div class='from row'>
+                <div class='form-group col-md-6'>
+                    <label class="label" for=''>Last Name</label><br>
+                    <input class="un " type="text" id='lname' name='lname' align="center"
+                           placeholder="Last Name"><br>
+                </div>
+                <div class='form-group col-md-6'>
+                    <label class="label" for=''>Email</label><br>
+                    <input class="un " type="email" id='email' name='email' align="center"
+                           placeholder="Email"><br>
+                </div>
+            </div>
+            <div class='form row'>
+                <div class='form-group col-md-6'>
+                    <label class="label" for=''>Password</label><br>
+                    <input class="pass" type="Password" id='password' name='password' align="center"
+                           placeholder="Password"><br>
+                </div>
+                <div class='from-group col-md-6'>
+                    <label class="label" for=''>Re-Password</label><br>
+                    <input class="pass" type="password" id='repsw' name='repsw' align="center"
+                           placeholder="Password Again!"><br>
+                </div>
+            </div>
+            <div class='my-3 py-3 text-center'>
+                <button type='submit' class='submit'><a>Register</a></button>
+            </div>
+            <br>
+        </form>
+    </div>
+
+</div>
+{% endblock content%}
+{% block footer %}align-bottom{% endblock footer %}
