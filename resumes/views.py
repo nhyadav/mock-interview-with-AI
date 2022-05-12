@@ -54,10 +54,10 @@ def resumescan(request):
             instance = form.save(commit=False)
             instance.user = user
             instance.save()
-            form_data = form.cleaned_data['resume']
+            form_data = instance.resume.name
             print(form_data)
             messages.success(request, "Your details have been loaded successfully......")
-            resume_text=scanresume('media/resume/'+str(form_data))
+            resume_text=scanresume('media/'+str(form_data))
             result, prabability = resume_predict([resume_text])
             context = {
                 'result': result,
