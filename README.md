@@ -92,7 +92,6 @@ To Contribute in this project follow below command.
 
 > ## Contibutor
 - Narayan Hari Yadav
-- Chandramani tiwari
 
 ### *- Note -*: if you like this repository helpful, please star it.
 
